@@ -12,13 +12,15 @@
       devShells = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
-          default = pkgs.mkShell { packages = [ pkgs.zola ]; };
+          default = (pkgs.mkShell.override { stdenv = pkgs.stdenvNoCC; }) {
+            packages = [ pkgs.zola ];
+          };
         });
 
       packages = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
-          default = pkgs.stdenv.mkDerivation {
+          default = pkgs.stdenvNoCC.mkDerivation {
             pname = "brentgervais-site";
             version = "0.1.0";
             src = self;
