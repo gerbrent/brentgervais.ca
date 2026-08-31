@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="container">
+  <header class="hero">
+    <img class="avatar" src="{{ get_url(path='img/headshot.jpg') }}" alt="Brent Gervais" width="600" height="600">
+    <h1>{{ section.title }}</h1>
+    {% if section.extra.tagline %}<p class="tagline">{{ section.extra.tagline }}</p>{% endif %}
+  </header>
+
+  {% for group in section.extra.sections %}
+  <section class="links">
+    <h2>{{ group.name }}</h2>
+    <ul>
+      {% for link in group.links %}
+      <li>
+        <a href="{{ link.url | safe }}"{% if link.me %} rel="me"{% endif %}>{{ link.text }}</a>
+        {% if link.note %}<span class="note">{{ link.note }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</main>
+{% endblock content %}

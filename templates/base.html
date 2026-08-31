@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config.title }}{% if section.title and section.title != config.title %} — {{ section.title }}{% endif %}</title>
+    <meta name="description" content="{{ config.description }}">
+    <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}">
+  </head>
+  <body>
+    {% block content %}{% endblock content %}
+    <footer>
+      <p>© {{ now() | date(format="%Y") }} Brent Gervais · Built with <a href="https://www.getzola.org" rel="noopener">Zola</a></p>
+    </footer>
+  </body>
+</html>

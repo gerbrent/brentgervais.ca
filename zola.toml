@@ -1,0 +1,4 @@
+base_url = "https://brentgervais.ca"
+title = "Brent Gervais"
+description = "Photographer and co-host of LINUX Unplugged on Jupiter Broadcasting. Based in Canada."
+build_search_index = false
