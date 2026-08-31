@@ -4,7 +4,7 @@ Landing page for Brent Gervais — Linux & open source podcaster, community buil
 
 ## About
 
-Single-page static site: bio plus link sections for podcasting, interviews, and social profiles. Zero JavaScript, no external fonts.
+Single-page static site with bio, link sections, and social profiles. Zero JavaScript, no external fonts.
 
 ## Tech
 
