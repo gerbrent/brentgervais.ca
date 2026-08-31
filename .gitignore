@@ -1,1 +1,7 @@
 public/
+
+# Local agent files (kept on disk, not pushed)
+AGENTS.md
+SPEC.md
+CHANGELOG.md
+ai-meta/
