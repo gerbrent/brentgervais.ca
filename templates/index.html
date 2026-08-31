@@ -5,6 +5,7 @@
   <header class="hero">
     <img class="avatar" src="{{ get_url(path='img/headshot.jpg') }}" alt="Brent Gervais" width="600" height="600">
     <h1>{{ section.title }}</h1>
+    {% if section.extra.subtitle %}<p class="subtitle">{{ section.extra.subtitle }}</p>{% endif %}
     {% if section.extra.tagline %}<p class="tagline">{{ section.extra.tagline }}</p>{% endif %}
   </header>
 

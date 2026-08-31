@@ -60,11 +60,19 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+.subtitle {
+  margin: 0.25rem auto 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  max-width: 34rem;
+}
+
 .tagline {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 34rem;
-  margin: 0 auto;
+  margin: 0.6rem auto 0;
 }
 
 .links {
