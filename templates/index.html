@@ -17,6 +17,13 @@
       <li>
         <a href="{{ link.url | safe }}"{% if link.me %} rel="me"{% endif %}>{{ link.text }}</a>
         {% if link.note %}<span class="note">{{ link.note }}</span>{% endif %}
+        {% if link.subs %}
+          {% for s in link.subs %}
+        <span class="sub"><a href="{{ s.url | safe }}">{{ s.text }}</a></span>
+          {% endfor %}
+        {% elif link.sub %}
+        <span class="sub"><a href="{{ link.sub.url | safe }}">{{ link.sub.text }}</a></span>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>

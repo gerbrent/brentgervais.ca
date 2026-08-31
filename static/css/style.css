@@ -118,6 +118,19 @@ h1 {
   font-size: 0.9rem;
 }
 
+.links .sub {
+  width: 100%;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+.links .sub a {
+  color: var(--muted);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 footer {
   text-align: center;
   color: var(--muted);
